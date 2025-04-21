@@ -1,8 +1,8 @@
+@import url('media-queries.css');
 /* Base rule */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-@import url(media-queries.css);
 
 * {
     margin: 0;
@@ -332,6 +332,7 @@ main {
 
 .section-course .course-div {
     padding: 3.2rem;
+    cursor: pointer;
 
     & p {
         text-align: left;
@@ -488,7 +489,8 @@ figure {
 /***** Contact Home Section *****/
 
 .section-contact--homepage {
-    width: 60%;
+    width: clamp(45%, 45% + 10vw, 100%);
+    /* max-width: 100%; */
     height: auto;
     margin: 25px auto;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -502,8 +504,12 @@ figure {
     /* z-index: 1; */
 
     & .grid {
-        align-items: center;
+        /* align-items: center; */
         gap: 6.4rem;
+    }
+
+    & .grid-two--cols{
+        grid-template-columns: auto auto !important;
     }
 
     /* & .contact-content {
@@ -523,6 +529,7 @@ figure {
 
     & .align-center {
         display: flex;
+        align-items: center;
         gap: 1.2rem;
     }
 
@@ -533,7 +540,7 @@ figure {
     }
 
     & img {
-        width: 100%;
+        width: 300px;
         height: auto;
     }
 }
@@ -554,13 +561,6 @@ footer {
         color: var(--footer-head-color);
     }
 
-    & p,
-    a {
-        font-size: 1.6rem;
-        color: var(--white-color);
-        position: relative;
-    }
-
     & .fa-solid {
         background: none;
         color: white;
@@ -570,17 +570,16 @@ footer {
 
     & .footer-three--cols {
         grid-template-columns: 1.5fr 3fr 1fr;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 22rem 50rem;            
+        }
     }
 
     & .mid-footer-div {
         display: flex;
         align-items: start;
         justify-content: space-around;
-    }
-
-    & h2 {
-        display: inline-flex;
-        align-items: center;
     }
 }
 
