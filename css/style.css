@@ -61,6 +61,7 @@ li {
     --white-color: #ffffff;
     --test: #070101;
     --para-color: #504e4d;
+    /* maincolor */
     --bnt-hover-bg-color: #003b99;
     --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     --footer-bg-color: var(--bnt-hover-bg-color);
@@ -508,7 +509,7 @@ figure {
         gap: 6.4rem;
     }
 
-    & .grid-two--cols{
+    & .grid-two--cols {
         grid-template-columns: auto auto !important;
     }
 
@@ -570,9 +571,18 @@ footer {
 
     & .footer-three--cols {
         grid-template-columns: 1.5fr 3fr 1fr;
-        
+
         @media (max-width: 768px) {
-            grid-template-columns: 22rem 50rem;            
+            grid-template-columns: 22rem 50rem;
+        }
+    }
+
+    & .footer-left--div .company-info {
+        padding-bottom: 1rem;
+
+        & p {
+            margin-left: 4.4rem;
+            text-align:left;
         }
     }
 
@@ -586,13 +596,7 @@ footer {
 
 /***** Left Footer Section *****/
 
-.footer-left--div .company-info {
-    padding-bottom: 1rem;
 
-    & p {
-        margin-left: 4.4rem;
-    }
-}
 
 footer .logo-brand {
     margin: 2rem 0 0 4.4rem;
@@ -774,7 +778,7 @@ footer .logo-brand {
             }
         }
 
-        & .section-common--title{
+        & .section-common--title {
             padding: 0 1rem;
         }
     }
@@ -783,10 +787,10 @@ footer .logo-brand {
 /***** End Blog Section *****/
 
 /***** Contact Section *****/
-.section-contact{
+.section-contact {
     margin-left: 4.2rem;
 
-    & .container{
+    & .container {
         margin: 0;
         padding: 3.2rem 1rem;
     }
