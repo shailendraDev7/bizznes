@@ -51,18 +51,18 @@ li {
 /* Theme */
 
 :root {
-    --main-color: #0062ff;
+    /* maincolor */
+    --main-color: #003b99;
+    --bnt-hover-bg-color: #003b99;
     --supporting-color: #ebf3fe;
     --font-color: #424242;
     --bg-color: #f7fcff;
-    --heading-color: #000a19;
+
     --heading-color: #000a19;
     --hero-heading-color: #0a043c;
+
     --white-color: #ffffff;
-    --test: #070101;
     --para-color: #504e4d;
-    /* maincolor */
-    --bnt-hover-bg-color: #003b99;
     --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     --footer-bg-color: var(--bnt-hover-bg-color);
     --fa-color: #5183d4;
@@ -493,7 +493,7 @@ figure {
     width: clamp(45%, 45% + 10vw, 100%);
     /* max-width: 100%; */
     height: auto;
-    margin: 25px auto;
+    margin: 100px auto 25px auto;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 1.2rem;
     -webkit-border-radius: 1.2rem;
@@ -501,11 +501,9 @@ figure {
     -ms-border-radius: 1.2rem;
     -o-border-radius: 1.2rem;
     padding: 0 3.2rem;
-    /* position: relative; */
-    /* z-index: 1; */
+    padding-top: 25px;
 
     & .grid {
-        /* align-items: center; */
         gap: 6.4rem;
     }
 
@@ -582,7 +580,7 @@ footer {
 
         & p {
             margin-left: 4.4rem;
-            text-align:left;
+            text-align: left;
         }
     }
 
@@ -834,3 +832,83 @@ input:focus-visible {
 }
 
 /***** End Contact Section *****/
+
+/***** About US Section *****/
+.team-div {
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .card-title {
+        font-weight: bold;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    & img {
+        width: 300px;
+        aspect-ratio: 1;
+        border-radius: 10%;
+        -webkit-border-radius: 10%;
+        -moz-border-radius: 10%;
+        -ms-border-radius: 10%;
+        -o-border-radius: 10%;
+    }
+
+    & .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .card,.imgPosition{
+        position: relative;
+    }
+
+    & .card-img-overlay {        
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1;
+
+        /* Alignment */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        padding-bottom: 1rem;
+
+        border-radius: 10%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: scale(0.9);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -moz-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -ms-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        & a{
+            color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+    & .card:hover .card-img-overlay {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+
+
+
+
+/***** End About US Section *****/
+
+/***** INDIVIDUAL PAGES Section ENDS *****/
